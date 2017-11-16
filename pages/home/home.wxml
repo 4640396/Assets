@@ -1,0 +1,44 @@
+<!--homepage.wxml-->
+<view>
+    <view style="height: {{searchHeight}}rpx;">
+        <view class="menu">
+            <view class='block'></view>
+            <block wx:for="{{menuList}}" wx:key="unique">
+              <navigator url="{{item.url}}" class="{{item.clsName}}">
+                  <view class="{{item.bkColor}}">
+                    <image mode="{{item.mode}}" src="{{item.imgUrl}}"></image>
+                  </view>
+                  <text>{{item.text}}</text>
+              </navigator>
+            </block>
+            <view class='block'></view>
+        </view>        
+    </view>
+      <view class="notice" style="height:{{noticeHeight}}rpx">
+      <image src="/image/common/icon_notice.png"></image>
+      <swiper class="notice-slider" 
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+        <swiper-item wx:for="{{imgUrls}}" wx:key="unique">
+          <text>{{item.title}}:{{item.content}}</text>
+        </swiper-item>
+      </swiper>
+    </view>      
+    
+    <view>
+        <view >
+          <canvas canvas-id="lineCanvas" class="scroll-item-content" disable-scroll="true" bindtouchstart="touchHandler"></canvas>
+        </view>
+        <view>
+          <canvas canvas-id="ringCanvas" class="scroll-item-content"  bindtouchstart="touchHandler2"></canvas>
+        </view>    
+        <view >
+          <canvas canvas-id="areaCanvas" class="scroll-item-content" bindtouchstart="touchHandler3"></canvas>
+        </view>
+    </view>    
+      <!-- <scroll-view  scroll-y="true" scroll-top="{{scrollTop}}" class="scroll-view-con" style="height:{{scrollHeight}}px;width:100%" bindscrolltolower="toLower" bindscroll="scroll">
+        
+      </scroll-view> -->
+    
+    <!-- <view class="bottom-tabbar" style="height:{{tabbarHeight}}rpx">    
+    </view>  -->
+</view>

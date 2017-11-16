@@ -1,0 +1,56 @@
+<view class="tag-choice-wrap" bindtap="choiceAddress">
+    <!-- <view class="choice-tag-cell" bindtap="choiceAddress">
+        <text class="f1 c5">地图定位</text>
+        <image class="arrow-right" src="/image/common/icon_arrow.png"></image>
+    </view> -->
+    <view class="choice-tag-wrap">
+        <text>地图定位</text>
+        <view class="choice-tag-right">
+            <text wx:if="{{showTxtMap != true}}">请选择地址</text>
+            <text wx:if="{{showTxtMap}}" class="f1 c4">{{locationAddress}}</text>
+            <image class="arrow-right" src="/image/common/icon_arrow.png"></image>
+        </view>        
+    </view>
+    <view class="tag-list" wx:if="{{showMap}}">
+         <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+    </view>
+</view>
+ <!-- <picker bindchange="bindPickerXmmc" value="{{xmmcIdx}}" range="{{xmmcArr}}" range-key="{{'name'}}" disabled="{{disabledPickerXm}}">
+  <view class="choice-tag-wrap">
+      <text>项目名称</text>
+      <view class="choice-tag-right">
+          <text wx:if="{{showTxtXm != true}}">请选择项目</text>
+          <text wx:if="{{showTxtXm}}" class="f1 c4">{{xmmcArr[xmmcIdx].name}}</text>
+          <image class="arrow-right" src="/image/common/icon_arrow.png"></image>
+      </view>        
+  </view>
+</picker>  -->
+<picker bindchange="bindPickerDymc" value="{{dymcIdx}}" range="{{dymcArr}}" range-key="{{'name'}}"  disabled="{{disabledPickerDy}}">
+  <view class="choice-tag-wrap">
+      <text>单元名称</text>
+      <view class="choice-tag-right">
+          <text wx:if="{{showTxtDy != true}}">请选择单元</text>
+          <text wx:if="{{showTxtDy}}" class="f1 c4">{{dymcArr[dymcIdx].name}}</text>
+          <image class="arrow-right" src="/image/common/icon_arrow.png"></image>
+      </view>        
+  </view>
+</picker>
+<view class="text-pic-cell">
+    <view class="text-img-wrap">
+        <text class="section-item-left f1 c5" >服务照片</text>
+        <image bindtap="choicePic" src="/image/common/icon_add_pic.png"></image> 
+    </view>      
+</view>
+<view wx:if="{{showImgs}}" class="text-pic-cell">
+    <view class="text-img-list">
+        <image wx:for="{{tempFilePaths}}" wx:key="unique" mode="aspectFit" bindtap="ylimg" data-src="{{item}}"  src="{{item}}"></image> 
+    </view>      
+</view>
+
+<view class="text-textarea-wrap">
+    <text class="f1 c5">简介</text>
+    <textarea bindblur="bindFwnr" placeholder-class="ph-class" placeholder="简介..." value="{{fwnr}}"  />
+</view>
+<button class="btn save-btn f2" style="margin-top: 40rpx;" bindtap="save">保存</button>
+ <button class="btn save-btn f2" style="margin-top: 40rpx;background:#e74249;" bindtap="test">删除</button> 
+<!-- <button class="btn close-btn f2" style="margin-top: 40rpx;margin-bottom: 40rpx;">取消</button> --> 

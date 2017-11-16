@@ -1,0 +1,189 @@
+/**homepage.wxss**/
+.menu{
+  height:220rpx;
+  background-color: #fff;
+  width:100%;
+}
+text{
+  font-size: 12px;
+}
+.block{
+  height:100%;
+  width:5%;
+  float:left;
+}
+.menudetail{
+  height:100%;
+  width:18%;
+  float: left;
+}
+.bkColor{
+  width:100rpx;
+  height:100rpx;
+  overflow:hidden;
+  margin:30rpx auto 20rpx;
+  border-radius: 45rpx;
+
+}
+.color-a{
+  background: linear-gradient(#FCD600, #FDAF00);
+}
+.color-b{
+  background: linear-gradient(#7250EA,#3F4695);
+}
+.color-c{
+  background: linear-gradient(#0797C1,#0777C5);
+}
+.color-d{
+   background: linear-gradient(#FD49AB,#FE0045);
+}
+.color-e{
+  background: linear-gradient(#CC66D7,#9753BF);
+}
+view 
+.menudetail text{
+  height:50rpx;
+  width:100%;
+  text-align:center;
+  display: block;
+}
+.menudetail image{
+  width:99rpx;
+  height:100rpx;
+}
+.navigator-hover {
+    background-color:#fff;
+}
+.urgent-affair{
+  width:100%;
+}
+
+.title{
+  padding:0 0 10px 13px;
+  display: block;
+  border-bottom:1px solid rgb(239,239,239); 
+  color:dimgray;
+  letter-spacing: 1px;
+}
+
+/*公告*/
+.notice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #002aff;
+  font-size: 24rpx;
+  height: 65rpx;
+  margin-left: 30rpx;
+}
+.notice image {
+  width: 30rpx;
+  height:30rpx;
+}
+.notice .notice-slider {
+  flex: 1;
+  height: 65rpx;
+  line-height: 65rpx;
+  margin: 10rpx;
+}
+
+/*房源 样式*/
+.pull-down-refresh {
+  height: 20rpx;
+  text-align: center;
+  color: #aaa;
+}
+page .scroll-view-con {
+  background-color: #eeeeee
+}
+
+.scroll-item-content {
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.scroll-item-content .centent-left {
+  padding: 40rpx 20rpx 40rpx 30rpx;
+  width: 158rpx;
+  height: 142rpx;
+}
+.scroll-item-content .content-center{
+  width: 376rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.scroll-item-content .content-center .shop-tag {
+  display: flex;
+  flex-direction: row;
+}
+.scroll-item-content .content-center .shop-tag .tag {
+  margin-right: 10rpx;
+  width: 88rpx;
+  height: 30rpx;
+  font-size: 22rpx;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-item-content .content-center .shop-name {
+  font-size: 30rpx;
+}
+.scroll-item-content .content-center .shop-tag {
+  padding-top: 10rpx;
+}
+.scroll-item-content .content-center .shop-introduce,.scroll-item-content .content-center .shop-address {
+  font-size: 26rpx;
+  color: #808080;
+  padding-top: 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+} 
+.scroll-item-content .content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 30rpx;
+}
+.scroll-item-content .content-right .distence {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.scroll-item-content .content-right .distence image{
+  width: 13rpx;
+  height: 15rpx;
+  margin-right: 4rpx;
+}
+.scroll-item-content .content-right .distence text{
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+.scroll-item-content .content-right .content-right-img {
+  margin-top: 40rpx;
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.tips {
+    font-size: 28rpx;
+    text-align: center;
+    padding: 10rpx 0 30rpx;
+    color: #ccc;
+}
+.tips image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+}
+
+.tips image,
+.tips text {
+    vertical-align: middle;
+}

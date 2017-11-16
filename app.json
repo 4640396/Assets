@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/house/index/index",
+    "pages/house/house/house",
+    "pages/house/bmap/bmap",
+    "pages/customer/index/index",
+    "pages/customer/list/list",
+    "pages/inspect/index/index",
+    "pages/inspect/list/list",
+    "pages/contract/index/index",
+    "pages/contract/list/list",
+    "pages/collection/index/index",
+    "pages/collection/list/list",
+    "pages/house/czf/czf",
+    "pages/customer/add/add",
+    "pages/demo/demo",
+    "pages/house/ht/ht"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "商旅资产管理平台",
+    "navigationBarTextStyle": "#fff"
+  }
+}

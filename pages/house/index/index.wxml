@@ -1,0 +1,57 @@
+<!--homepage.wxml-->
+<view>
+    <view style="height: {{searchHeight}}rpx;">
+        <view class="menu">
+            <view class='block'></view>
+            <block wx:for="{{menuList}}" wx:key="unique">
+              <navigator url="{{item.url}}" class="{{item.clsName}}">
+                  <view class="{{item.bkColor}}">
+                    <image mode="{{item.mode}}" src="{{item.imgUrl}}"></image>
+                  </view>
+                  <text>{{item.text}}</text>
+              </navigator>
+            </block>
+            <view class='block'></view>
+        </view>        
+    </view>
+    <view class="notice" style="height:{{noticeHeight}}rpx">
+      <image src="/image/common/icon_notice.png"></image>
+      <swiper class="notice-slider" 
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+        <swiper-item wx:for="{{imgUrls}}" wx:key="unique">
+          <text>公告内容内容内容内容内容内容内容内</text>
+        </swiper-item>
+      </swiper>
+    </view>
+    <view>
+      <scroll-view  scroll-y="true" scroll-top="{{scrollTop}}" class="scroll-view-con" style="height:{{scrollHeight}}px;width:100%" bindscrolltolower="toLower" bindscroll="scroll">
+          <view wx:for="{{arrList}}" wx:key="unique"  class="scroll-item-content" bindtap="houseDetail" id="{{item.id}}">
+            <image class="centent-left" src="/image/common/default_picture.png" mode="aspectFit"></image>
+            <view class="content-center">
+                <view class="shop-name">{{item.name}}</view>
+                <!--<view class="shop-tag">
+                    <view class="tag discount-tag">特惠</view>
+                    <view class="tag open-tag">精装</view>
+                    <view class="tag rest-tag">高层</view>
+                </view>-->
+                <!-- <view class="shop-introduce">{{item.xmbh}}</view> -->
+                <view class="shop-address">{{item.dz}}</view>          
+            </view>
+            <view class="content-right">
+                <!--<view class="distence">
+                    <image src="/image/home/index/3xyh.png"></image>
+                    <text>200m</text>
+                </view>-->
+                <!--<image class="content-right-img" src="/image/home/index/12dianhua.png" mode="aspectFit"></image>-->
+            </view>
+          </view>
+          <view class="tips">
+            <view wx:if="{{hasMore}}"><image src="../../../image/common/loading.gif" mode="aspectFill"/><text>加载中...</text></view>
+            <view wx:else><text>没有更多内容了</text></view>
+          </view>
+        </scroll-view>
+    </view>
+    <!--底部选项卡-->
+    <view class="bottom-tabbar" style="height:{{tabbarHeight}}rpx">    
+    </view>
+</view>

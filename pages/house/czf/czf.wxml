@@ -1,0 +1,50 @@
+<view class="text-input-wrap" wx:for="{{arrList}}" wx:key="unique">
+    <view class="item">
+        <text>业主姓名：</text>
+        <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1"  value="{{item.name}}"/>
+    </view>
+    <view class="item">
+        <text>业主性质：</text>
+        <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1"  value="{{item.yzxz}}"/>
+    </view>    
+    <view class="item">
+        <text>性    别：</text>
+        <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1"  value="{{item.sex}}"/>
+    </view>
+    <view class="item">
+        <text>身份证：</text>
+        <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1"  value="{{item.sfz}}"/>
+    </view> 
+    <view class="item">
+        <text>手    机：</text>
+        <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1"  value="{{item.phone}}"/>
+    </view>
+    <view class="item">
+        <text>经营业态：</text>
+        <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1"  value="{{item.jyyt}}"/>
+    </view> 
+    <view class="item">
+        <text>传    真：</text>
+        <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1"  value="{{item.fax}}"/>
+    </view>
+    <view class="item">
+        <text>开户银行：</text>
+        <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1"  value="{{item.khyh}}"/>
+    </view>  
+    <view class="item">
+        <text>银行账号：</text>
+        <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1"  value="{{item.yhzh}}"/>
+    </view>
+    <view class="item">
+        <text>户籍地址：</text>
+        <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1"  value="{{item.hjdz}}"/>
+    </view>  
+    <view class="item">
+        <text>通信地址：</text>
+        <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1"  value="{{item.txdz}}"/>
+    </view>
+    <view class="item">
+        <text>邮    箱：</text>
+        <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1"  value="{{item.yx}}"/>
+    </view>  
+</view>

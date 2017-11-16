@@ -1,0 +1,37 @@
+
+.map {
+    height: 100%;
+    width: 100%;
+}
+page .scroll-view-con {
+  background-color: #eeeeee
+}
+.scroll-item-content {  
+  padding: 20rpx 20rpx;
+  display: flex;
+  font-size: 30rpx;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.scroll-item-title{  
+  padding: 20rpx 20rpx;
+  display: flex;
+  font-size: 30rpx;
+  width: 100%;
+  background-color: #ffffff;
+}
+.scroll-item-img{  
+  padding: 0rpx 20rpx;
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+}
+.scroll-item-img image{
+    width: 150rpx;
+    height: 150rpx;
+    margin-right: 15rpx;
+}
+.scroll-item-name {
+  color: #808080;
+}

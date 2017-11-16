@@ -1,0 +1,76 @@
+<view style="position:relative">
+<view class="search-input bgc" style="{{searchHeight}}rpx;">
+    <view class="search-area">
+        <image class="icon-search" src="/image/house/44guanli.png"></image>
+        <input class="f2" placeholder-class="ph-class" placeholder="输入名称开始搜索" bindinput="searchName"/>
+    </view>
+    <view class="search-btn" bindtap="search">搜索</view>
+</view>
+<view class="search-condition" style="{{orderFilterHeight}}rpx;">
+    <view class="search-item" bindtap="searchByOrder">
+        <view class="icon-wrap">
+            <image class="icon-left" src="/image/house/45guanli{{searchByOrder?'o':'h'}}.png"></image>
+            <text class="f3 {{searchByOrder?'c':'c-6'}}">排序</text>
+        </view>
+        <image class="icon_right" src="/image/house/47guanli{{searchByOrder?'o':'h'}}.png"></image>
+    </view>
+    <view class="search-item" bindtap="searchByFilter">
+         <view class="icon-wrap">
+             <image class="icon-left" src="/image/house/46guanli{{searchByFilter?'o':'h'}}.png"></image>
+             <text class="f3 {{searchByFilter?'c':'c-6'}}">筛选</text>
+         </view>
+         <image class="icon_right" src="/image/house/47guanli{{searchByFilter?'o':'h'}}.png"></image>
+    </view>
+</view>
+
+<scroll-view scroll-y="true" style="height:{{scrollHeight}}px" scroll-top="0">
+  <view class="prod-list" wx:for="{{arrList}}">
+     <view class="prod" style="height:{{prodItemHeight}}rpx">
+        <view id="{{item.id}}" style="right:0px;transition:none" class="prod-before" catchtap="editProdSvr">
+            <view class="prod-info-wrap">
+                <image class="prod-img" src="{{item.slt == '' ? '/image/common/default_picture.png' : 'https://www.njshanglv.com'+item.slt}}"></image>
+                 <view class="info">
+                    <view class="title f1 c5">
+                        {{item.name}}
+                    </view>
+                    <!-- <view class="two-line-ellipsis des f2 c4">
+                        {{item.xmbh}}
+                    </view> -->
+                    <view class="two-line-ellipsis des f2 c4">
+                        {{item.dz}}
+                    </view>
+                    <view class="prod-status f5">距我{{item.distance}}km</view>
+                 </view>
+            </view>            
+        </view>
+        <view class="prod-after" style="height:{{prodItemHeight}}rpx">
+            <view class="item-btn-wrap" 
+            style="height:{{shelveHeight}}rpx;">
+            </view>
+        </view>
+     </view>
+  </view>
+</scroll-view>
+</view>
+
+<view class="mask {{(searchByFilter||searchByOrder) ? '' : 'hide' }}">
+    <scroll-view class="order-select-list" scroll-y="true">       
+        <view wx:if="{{searchByOrder}}" class="item f3" bindtap="searchDistance" data-distance="{{distanceShow ? '2' : '1'}}">
+            <text class="{{distanceShow ? 'c' : 'c-6'}}">距离最近</text>
+            <image wx:if="{{distanceShow}}" class="icon_yes_no_bg" src="/image/common/53youhuij.png"></image>
+        </view>
+        <view wx:if="{{searchByFilter}}" class="item f3" bindtap="searchAreaLt" data-area="1">
+            <text class="c-6">{{area.lt}}</text>
+            <image wx:if="{{areaLt}}" class="icon_yes_no_bg" src="/image/common/53youhuij.png"></image>
+        </view>        
+        <view wx:if="{{searchByFilter}}" class="item f3" bindtap="searchAreaGt" data-area="2">
+            <text class="c-6">{{area.gt}}</text>
+            <image wx:if="{{areaGt}}" class="icon_yes_no_bg" src="/image/common/53youhuij.png"></image>
+        </view>
+    </scroll-view>
+    <!-- <view wx:if="{{searchByFilter}}" class="two-btn-wrap">
+        <view class="bgc f2">重置</view>
+        <view class="bgc f2" catchtap="confirmFilter">确定</view>
+    </view> -->
+</view>
+

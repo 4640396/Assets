@@ -1,0 +1,22 @@
+<!--login.wxml-->
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item}}" mode="{{mode}}" class="slide-image" width="100%" height="100%"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <form>
+    <view class="login-area">
+      <view class='input-area'>
+         <text>账户</text><input bindinput="userInput" value="{{userData}}"/>
+      </view>
+      <view class="line"></view>
+      <view class='input-area'>
+         <text>密码</text><input password bindinput="passwordInput" value="{{passwordData}}"/>
+      </view> 
+    </view>
+    <button form-type="submit" class='button-hover' bindtap="login">登录</button>
+  </form>
+</view>

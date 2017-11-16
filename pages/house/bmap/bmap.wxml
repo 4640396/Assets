@@ -1,0 +1,75 @@
+<view style="height: {{searchHeight}}rpx;">
+    <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+</view>
+<view>
+    <scroll-view  scroll-y="true" scroll-top="{{scrollTop}}" class="scroll-view-con" style="height:{{scrollHeight}}px;width:100%" bindscrolltolower="toLower" bindscroll="scroll">
+        <view wx:for="{{arrList}}" wx:key="unique" wx:for-item="item">
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 项目编号：</label>{{item.xmbh}}
+            </view>
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 房源名称：</label>{{item.name}}
+            </view>
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 房源性质：</label>{{item.xz}}
+            </view>
+            <view class="scroll-item-title ">
+              <label class="scroll-item-name"> 房屋平面图：</label>
+            </view>
+            <view  class="scroll-item-img">
+                <image wx:for="{{tempFilePaths}}" wx:key="unique" mode="aspectFit" bindtap="ylimg" data-src="{{item}}"  src="{{item}}"></image>        
+            </view>
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 使用方向：</label>{{item.syfx}}
+            </view>
+             <view class="scroll-item-content">
+              <label class="scroll-item-name"> 所在区域：</label>{{item.szqy}}
+            </view> 
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 地    址：</label>{{item.dz}}
+            </view>
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 建筑面积：</label>{{item.jzmj}}
+            </view>
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 土地面积：</label>{{item.tdmj}}
+            </view>
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 产权单位：</label>{{item.cqdw}}
+            </view>
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 产权状况：</label>{{item.cqzk}}
+            </view>
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 房产证号：</label>{{item.fczh}}
+            </view>
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 丘   号：</label>{{item.qh}}
+            </view>
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 土地证号：</label>{{item.tdzh}}
+            </view>
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 土地状况：</label>{{item.tdzk}}
+            </view>
+            
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 管辖单位：</label>{{item.gxdw}}
+            </view>
+            <view class="scroll-item-content">
+              <label class="scroll-item-name"> 备   注：</label>{{item.remarks}}
+            </view>
+            <view class="scroll-item-content" bindtap="getCzf" id="{{item.czfid}}">
+              <label class="scroll-item-name" > 承租人信息：</label>{{item.czf}}
+            </view>
+              <label class="scroll-item-name" > 合同信息：</label>
+                <view wx:for="{{ht}}" wx:key="unique" wx:for-item="item1">
+                  <view class="scroll-item-content" bindtap="editProdSvr" id="{{item1.htbid}}">
+                  <label class="scroll-item-name"> 合同编号：</label>  {{item1.htbh}}
+                   </view>
+                </view>
+
+        </view>
+        
+    </scroll-view>
+</view>

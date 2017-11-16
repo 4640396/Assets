@@ -1,0 +1,53 @@
+<view class="text-input-wrap"  wx:for="{{arrList}}" wx:key="unique">
+    <view class="item">
+        <text class="f1 c5">设备编号</text>
+        <text class="f2 c4">{{item.sbbh}}</text>
+        <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.xmmc}}" /> -->
+    </view>
+    <view class="item">
+        <text class="f1 c5">单元名称</text>
+        <text class="f2 c4">{{item.dymc}}</text>
+        <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.dymc}}" /> -->
+    </view>    
+    <view class="item">
+        <text class="f1 c5">设备名称</text>
+        <text class="f2 c4">{{item.sbmc}}</text>
+        <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.sbmc}}" /> -->
+    </view>
+    <view class="item">
+        <text class="f1 c5">是否合格</text>
+        <text class="f2 c4">{{item.sfhg}}</text>
+        <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.sbwz}}" /> -->
+    </view>
+    <view class="item">
+        <text class="f1 c5">上次检查日期</text>
+        <text class="f2 c4">{{item.scjcrq}}</text>
+        <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.scjcrq}}" /> -->
+    </view>
+    <view class="item">
+        <text class="f1 c5">本次检查日期</text>
+        <text class="f2 c4">{{item.bcjcrq}}</text>
+        <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.bcjcrq}}" /> -->
+    </view>
+    <view class="item">
+        <text class="f1 c5">检查有效日期</text>
+        <text class="f2 c4">{{item.jcyxrq}}</text>
+        <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.bcjcrq}}" /> -->
+    </view>    
+    <view class="item">
+        <text class="f1 c5">制单人</text>
+        <text class="f2 c4">{{item.zdr}}</text>
+        <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.zdr}}" /> -->
+    </view>
+    <view class="item">
+        <text class="f1 c5">制单日期</text>
+        <text class="f2 c4">{{item.zdrq}}</text>
+        <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.zdrq}}" /> -->
+    </view> 
+    <view class="text-textarea-wrap">
+        <text class="f1 c5">备注</text>
+        <textarea disabled="{{inputDisabled}}" class="f2 c4" placeholder-class="ph-class f2" value="{{item.remarks}}" />
+    </view>
+</view>
+
+

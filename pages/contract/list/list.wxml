@@ -1,0 +1,98 @@
+<view class="text-input-wrap" wx:for="{{arrList}}" wx:key="unique">
+  <view class="item">
+    <text class="f1 c5">合同编号</text>
+    <text class="f2 c4">{{item.htbh}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.htbh}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">单元名称</text>
+    <text class="f2 c4">{{item.dymc}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.dymc}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">所属集团</text>
+    <text class="f2 c4">{{item.ssjt}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.ssjt}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">建筑面积</text>
+    <text class="f2 c4">{{item.jzmj}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.jzmj}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">土地面积</text>
+    <text class="f2 c4">{{item.tdmj}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.tdmj}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">签约日期</text>
+    <text class="f2 c4">{{item.qyrq}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.qyrq}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">合同状态</text>
+    <text class="f2 c4">{{item.htzt}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.htzt}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">承租方性质</text>
+    <text class="f2 c4">{{item.czfxz}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.czfxz}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">承租方</text>
+    <text class="f2 c4">{{item.czf}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.czf}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">联系人</text>
+    <text class="f2 c4">{{item.lxr}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.lxr}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">联系人职务</text>
+    <text class="f2 c4">{{item.lxrzw}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.lxrzw}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">联系人电话</text>
+    <text class="f2 c4">{{item.phone}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.phone}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">合同月租金</text>
+    <text class="f2 c4">{{item.htyzj}}万元</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.htyzj}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">租房保证金</text>
+    <text class="f2 c4">{{item.zfbzj}}万元</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.zfbzj}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">合同押金</text>
+    <text class="f2 c4">{{item.htyj}}万元</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.htyj}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">起租日</text>
+    <text class="f2 c4" wx:if="{{item.qzr}}">{{item.qzr}} ~ {{item.dqr}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="" /> ~ <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.dqr}}" /> -->
+  </view>
+ 
+  <view class="item">
+    <text class="f1 c5">免租期起</text>
+    <text class="f2 c4">{{item.mzqq}} ~ {{item.mzqz}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.mzqq}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">创建日期</text>
+    <text class="f2 c4">{{item.cjrq}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.cjrq}}" /> -->
+  </view>
+  <view class="item">
+    <text class="f1 c5">创建人员</text>
+    <text class="f2 c4">{{item.cjry}}</text>
+    <!-- <input disabled="{{inputDisabled}}" placeholder-class="ph-class f1" value="{{item.cjry}}" /> -->
+  </view>
+</view>
